@@ -1,0 +1,22 @@
+echo "Enter file 1 name"
+read f1
+if [ -f$f1 ]
+then
+echo "The $f1 exists."
+echo "The contents of $f1 are :"
+cat $f1
+while [ true ]
+do
+echo "Enter file 2 name"
+read f2
+if [ -f$f2 ]
+then
+echo "$f2 exist......Please enter other name"
+echo "The translated content of $f1"
+tr '[a-z]' '[A-Z]' <$f1 >$f2
+cat $f2
+break
+fi
+done
+break
+else
